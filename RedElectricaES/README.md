@@ -1,4 +1,54 @@
-# Proyecto Red Eléctrica - Demanda
+📊 Sistema Automatizado de Extracción y Carga de Datos de Demanda REE
+
+Este proyecto implementa una arquitectura automatizada y escalable para la extracción, procesamiento y almacenamiento de datos de demanda eléctrica provenientes de la Red Eléctrica de España (REE).
+
+El sistema permite obtener datos históricos y actualizados de demanda, almacenarlos en AWS S3 y cargarlos de forma estructurada en una base de datos PostgreSQL para su posterior análisis.
+
+🚀 Objetivo
+
+Construir una pipeline de datos automatizada que extraiga información de la API de la REE, la almacene en un entorno seguro en la nube y la procese para su análisis eficiente en una base de datos relacional.
+
+⚙️ Arquitectura General
+
+Extracción de Datos (Data Engineering & Architecture):
+
+Obtención de la API Key de REE.
+
+Desarrollo de una pipeline de extracción masiva para recopilar datos históricos de demanda y almacenarlos en un bucket S3.
+
+Configuración de una AWS Lambda programada mediante EventBridge para ejecutar la extracción diaria de las últimas 24 horas y guardar las observaciones en el bucket.
+
+Procesamiento y Carga (ETL - Data Engineering):
+
+Implementación de una segunda AWS Lambda con trigger de S3, que se activa al detectar nuevos ficheros JSON.
+
+Esta función procesa y limpia los datos antes de cargarlos en una base de datos PostgreSQL, asegurando integridad y consistencia en el almacenamiento.
+
+🧩 Tecnologías Utilizadas
+
+AWS Lambda
+
+Amazon S3
+
+Amazon EventBridge
+
+PostgreSQL
+
+Python (boto3, psycopg2, pandas)
+
+API REE (Red Eléctrica de España)
+
+📈 Beneficios
+
+Pipeline completamente automatizada y sin servidor (serverless).
+
+Almacenamiento de datos histórico y actualizado.
+
+Estructura escalable y mantenible.
+
+Datos limpios y listos para análisis o visualización.
+
+FICHEROS CON LAS DIFERENTES PARTES DEL PROYECTO
 ## 00.Ree
 En este archivo se hace un request de todos los datos disponibles a la API de REE - 31 diciembre 2013-. Pasos:
 - Petición de Token a la API de REE
