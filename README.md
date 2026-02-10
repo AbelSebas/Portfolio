@@ -22,8 +22,8 @@ En este portfolio encontrarás proyectos que combinan análisis de datos, machin
 - **Tecnologías:** Python, Pandas, AWS , FASTAPI
 
 ### 4. Monitorizacion de lineas industriales
--**Descripcion:**Proyecto enfocado en la monitorización, análisis y optimización del consumo energético en líneas de producción industriales mediante una arquitectura basada en la nube y modelos de análisis de datos.
--**Tecnologías utilizadas:**Python · AWS (Lambda, RDS) · PostgreSQL · Pandas · NumPy · Scikit-learn · XGBoost · Grafana(ejemplos) · SQL
+- **Descripcion:** Proyecto enfocado en la monitorización, análisis y optimización del consumo energético en líneas de producción industriales mediante una arquitectura basada en la nube y modelos de análisis de datos.
+- **Tecnologías utilizadas:** Python · AWS (Lambda, RDS) · PostgreSQL · Pandas · NumPy · Scikit-learn · XGBoost · Grafana(ejemplos) · SQL
 
 
 ---
